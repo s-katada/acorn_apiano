@@ -18,7 +18,8 @@ const contentStyle: CSSProperties = {
 
 const footerStyle: CSSProperties = {
   background: 'transparent',
-  height: '10vh',
+  textAlign: 'center',
+  verticalAlign: 'middle',
   zIndex: 1,
 };
 
@@ -66,7 +67,7 @@ export default function Home() {
             お気軽にお問い合わせください。
           </p>
         </div>
-        <div style={{margin: '50vh 0 30vh 0'}}>
+        <div style={{margin: '50vh 0 0 0'}}>
           <Typography.Title level={3}>講師紹介</Typography.Title>
           <Image
             src='/teacher.png'
@@ -83,8 +84,17 @@ export default function Home() {
       </Content>
       <Footer style={footerStyle}>
         <div>
-          <Typography.Title level={3} style={{color: 'white'}}>CONTACT</Typography.Title>
-          <p>お問い合わせはこちらから</p>
+          <Typography.Title level={3}>CONTACT</Typography.Title>
+          <p>公式LINE</p>
+          <a href="https://lin.ee/mRHyhXO">
+            <Image
+              src='/line_button.png'
+              alt='友だち追加'
+              height={40}
+              width={100}
+              border="0"
+            />
+          </a>
         </div>
       </Footer>
     </Layout>

@@ -1,4 +1,5 @@
 'use client';
+import { CSSProperties } from 'react';
 import { Layout, Flex, Typography } from 'antd';
 import Image from 'next/image';
 
@@ -31,12 +32,10 @@ export default function Home() {
         src='/piano.jpeg'
         alt='ピアノ'
         layout='fill'
-        object='cover'
         style={{ filter: 'brightness(60%)', width: '100%', height: '100%' }}
-        zIndex={0}
       />
       <Header style={headerStyle}>
-        <Flex horizon>
+        <Flex>
           <Image
             src='/donguri.png'
             alt='どんぐり'
@@ -92,7 +91,7 @@ export default function Home() {
               alt='友だち追加'
               height={40}
               width={100}
-              border="0"
+              style={{border: '0'}}
             />
           </a>
         </div>

@@ -5,8 +5,8 @@ import { AntdRegistry } from '@ant-design/nextjs-registry';
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "どんぐりピアノ教室",
-  description: "どんぐりピアノ教室のホームページです。",
+  title: "岐阜県中津川市福岡ピアノ教室",
+  description: "岐阜県中津川市福岡にあるピアノ教室です",
 };
 
 export default function RootLayout({

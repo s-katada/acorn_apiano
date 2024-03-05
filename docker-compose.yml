@@ -1,0 +1,37 @@
+version: '3'
+services:
+  db:
+    container_name: 'db'
+    image: postgres
+    environment:
+      POSTGRES_USER: 'postgres'
+      POSTGRES_PASSWORD: 'password'
+    ports:
+      - '5432:5432'
+    volumes:
+      - db:/var/lib/postgresql/data
+    depends_on:
+      - api
+  web:
+    container_name: 'web'
+    build:
+      context: fe
+      dockerfile: dockerfile
+    volumes:
+      - ./fe:/fe
+    ports:
+      - '8080:8080'
+  api:
+    container_name: 'api'
+    build:
+      context: be
+      dockerfile: dockerfile
+    volumes:
+      - ./be:/be
+    depends_on:
+      - web
+    ports:
+      - '3000:3000'
+volumes:
+  db:
+    

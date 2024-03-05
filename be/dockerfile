@@ -1,0 +1,5 @@
+FROM ruby:3.3.0
+WORKDIR /be
+COPY . /be/
+RUN bundle install
+CMD ["bundle", "exec", "rails", "server", "-b", "0.0.0.0"]
